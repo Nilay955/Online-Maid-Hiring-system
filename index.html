@@ -3,124 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaidMatch - Find Your Perfect Home Assistant</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MaidMatch - Your Trusted Home Services Partner</title>
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="hero-section">
-            <div class="logo">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=100" alt="MaidMatch Logo" class="logo-img">
-                <h1>MaidMatch</h1>
-            </div>
-            <h2>Find Your Perfect Home Assistant</h2>
-            <p>Connect with verified professional housekeepers and make your home sparkle. Join thousands of satisfied households today.</p>
-            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800" alt="Cleaning Service" class="hero-image">
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=100" alt="MaidMatch Logo" class="nav-logo">
+            <h1>MaidMatch</h1>
         </div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='auth.html#login'" class="login-btn">Login</button>
+            <button onclick="window.location.href='auth.html#signup'" class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
 
-        <div class="auth-container">
-            <div class="tabs">
-                <button class="tab active" data-tab="login">Login</button>
-                <button class="tab" data-tab="signup">Sign Up</button>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Perfect Home Assistant</h1>
+                <p>Connect with verified professional housekeepers and make your home sparkle.</p>
+                <div class="hero-buttons">
+                    <button onclick="window.location.href='auth.html#signup'" class="cta-btn">
+                        Get Started <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button onclick="scrollToSection('how-it-works')" class="secondary-btn">
+                        How it Works <i class="fas fa-play"></i>
+                    </button>
+                </div>
             </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800" alt="Cleaning Service">
+            </div>
+        </section>
 
-            <!-- Login Form -->
-            <form id="loginForm" class="form">
-                <div class="form-group">
-                    <label for="loginEmail">Email Address</label>
-                    <input type="email" id="loginEmail" required placeholder="you@example.com">
+        <section id="how-it-works" class="features">
+            <h2>How It Works</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>1. Sign Up</h3>
+                    <p>Create your account in minutes and tell us about your needs.</p>
                 </div>
-                <div class="form-group">
-                    <label for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" required placeholder="••••••••">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>2. Find Matches</h3>
+                    <p>Browse through verified professionals and find your perfect match.</p>
                 </div>
-                <div class="remember-forgot">
-                    <label class="remember">
-                        <input type="checkbox" id="rememberMe">
-                        <span>Remember me</span>
-                    </label>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>3. Book Services</h3>
+                    <p>Schedule services at your convenience with secure booking.</p>
                 </div>
-                <button type="submit" class="submit-btn">Sign In</button>
-                <p class="switch-text">
-                    Don't have an account? <a href="#" class="switch-link" data-switch="signup">Sign up now</a>
-                </p>
-            </form>
+            </div>
+        </section>
 
-            <!-- Signup Form -->
-            <form id="signupForm" class="form hidden">
-                <div class="form-group">
-                    <label for="signupName">Full Name</label>
-                    <input type="text" id="signupName" required placeholder="Guest User">
+        <section class="benefits">
+            <h2>Why Choose MaidMatch?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Verified Professionals</h3>
+                    <p>All our maids undergo thorough background checks.</p>
                 </div>
-                <div class="form-group">
-                    <label for="signupEmail">Email Address</label>
-                    <input type="email" id="signupEmail" required placeholder="you@example.com">
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book services that fit your schedule.</p>
                 </div>
-                <div class="form-group">
-                    <label for="signupPassword">Password</label>
-                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                <div class="benefit-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality Service</h3>
+                    <p>Rated 4.8/5 by satisfied customers.</p>
                 </div>
-                <div class="form-group">
-                    <label for="signupAddress">Home Address</label>
-                    <textarea id="signupAddress" required placeholder="Enter your complete address" rows="3"></textarea>
+                <div class="benefit-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Your satisfaction is our top priority.</p>
                 </div>
-                <div class="terms">
-                    <label class="remember">
-                        <input type="checkbox" id="terms" required>
-                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
-                    </label>
-                </div>
-                <button type="submit" class="submit-btn">Create Account</button>
-                <p class="switch-text">
-                    Already have an account? <a href="#" class="switch-link" data-switch="login">Login here</a>
-                </p>
-            </form>
+            </div>
+        </section>
 
-            <!-- Forgot Password Form -->
-            <form id="forgotPasswordForm" class="form hidden">
-                <h3>Forgot Password</h3>
-                <p class="form-description">Enter your email address and we'll send you an OTP to reset your password.</p>
-                <div class="form-group">
-                    <label for="forgotEmail">Email Address</label>
-                    <input type="email" id="forgotEmail" required placeholder="you@example.com">
-                </div>
-                <button type="submit" class="submit-btn">Send OTP</button>
-                <button type="button" class="back-btn" onclick="document.getElementById('loginForm').classList.remove('hidden'); this.parentElement.classList.add('hidden');">
-                    Back to Login
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of satisfied households today.</p>
+                <button onclick="window.location.href='auth.html#signup'" class="cta-btn">
+                    Create Free Account <i class="fas fa-arrow-right"></i>
                 </button>
-            </form>
+            </div>
+        </section>
+    </main>
 
-            <!-- OTP Verification Form -->
-            <form id="otpVerificationForm" class="form hidden">
-                <h3>Enter OTP</h3>
-                <p class="form-description">Please enter the 6-digit code sent to your email.</p>
-                <div class="form-group">
-                    <label for="otpInput">OTP Code</label>
-                    <input type="text" id="otpInput" required maxlength="6" pattern="[0-9]{6}" placeholder="Enter 6-digit OTP">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MaidMatch</h3>
+                <p>Making home maintenance easier, one match at a time.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-                <button type="submit" class="submit-btn">Verify OTP</button>
-                <p class="resend-text">
-                    Didn't receive the code? <a href="#" onclick="resendOTP(event)">Resend OTP</a>
-                </p>
-            </form>
-
-            <!-- Reset Password Form -->
-            <form id="resetPasswordForm" class="form hidden">
-                <h3>Reset Password</h3>
-                <p class="form-description">Please enter your new password.</p>
-                <div class="form-group">
-                    <label for="newPassword">New Password</label>
-                    <input type="password" id="newPassword" required placeholder="Enter new password">
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" required placeholder="Confirm new password">
-                </div>
-                <button type="submit" class="submit-btn">Reset Password</button>
-            </form>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="auth.html">Login</a></li>
+                    <li><a href="auth.html">Sign Up</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@maidmatch.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MaidMatch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>
